@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CERTIFICATE | From Heaven To Horizon</title>
+    <link rel="stylesheet" href="certificate.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/Images & Videos/My Favicon.png"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollSmoother.min.js"
+      defer
+    ></script>
+    <script src="certificate.js" defer></script>
+  </head>
+
+  <body>
+    <nav id="nav" class="nav">
+      <div id="nleft" class="nav-left">
+        <a
+          href="/PoIPage/Pointofintrest.html"
+          draggable="false"
+          class="logo-link"
+        >
+          <svg class="snake-logo" viewBox="0 0 200 50" aria-hidden="true">
+            <path d="M0,25 Q50,0 100,25 T200,25"></path>
+          </svg>
+          <span>POINT OF INTEREST</span>
+        </a>
+      </div>
+      <div id="nright" class="nav-right">
+        <a href="/Project/Project.html" draggable="false">PROJECT</a>
+        <a href="/ConnectWithMe/Connect.html" draggable="false"
+          >CONNECT WITH ME
+        </a>
+      </div>
+    </nav>
+
+    <main class="scene" id="intro" tabindex="-1">
+      <section class="pair" aria-label="Certificate Section 1">
+        <div class="img-cont">
+          <video
+            src="https://cdn.pixabay.com/video/2023/08/19/176794-856056410_tiny.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+        </div>
+        <div class="connector" aria-hidden="true"></div>
+        <article class="content" tabindex="0" aria-label="Certificate 1">
+          <img
+            src="/Images & Videos/Dynamic.png"
+            alt="Certificate #1 Thumbnail"
+          />
+          <h2>Certificate #1</h2>
+          <p>
+            I am passionate about problem-solving and algorithmic thinking,
+            which drove me to earn a certificate in Dynamic Programming.
+          </p>
+          <span class="close" aria-hidden="true">+</span>
+        </article>
+      </section>
+
+      <section class="pair" aria-label="Certificate Section 2">
+        <div class="img-cont">
+          <video
+            src="https://cdn.pixabay.com/video/2023/09/22/181802-867371654_tiny.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+        </div>
+        <div class="connector" aria-hidden="true"></div>
+        <article class="content" tabindex="0" aria-label="Certificate 2">
+          <img
+            src="/Images & Videos/Gen Ai.png"
+            alt="Certificate #2 Thumbnail"
+          />
+          <h2>Certificate #2</h2>
+          <p>
+            Certified in Generative AI Studio, passionate about AI creativity
+            and innovation.
+          </p>
+          <span class="close" aria-hidden="true">+</span>
+        </article>
+      </section>
+
+      <section class="pair" aria-label="Certificate Section 3">
+        <div class="img-cont">
+          <video
+            src="https://cdn.pixabay.com/video/2023/12/11/192806-893533506_tiny.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+        </div>
+        <div class="connector" aria-hidden="true"></div>
+        <article class="content" tabindex="0" aria-label="Certificate 3">
+          <img
+            src="/Images & Videos/Innovating.png"
+            alt="Certificate #3 Thumbnail"
+          />
+          <h2>Certificate #3</h2>
+          <p>
+            Google Cloud AI certified, skilled in deploying cutting-edge AI
+            technologies.
+          </p>
+          <span class="close" aria-hidden="true">+</span>
+        </article>
+      </section>
+
+      <section class="pair upcoming" aria-label="Upcoming Certificates">
+        <div class="img-cont">
+          <h2>Upcoming</h2>
+          <p>Future Certification and Achievement's will appear here.</p>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="contentModal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-inner" role="document">
+        <button class="close-btn" aria-label="Close modal">&times;</button>
+        <button
+          class="modal-nav modal-prev"
+          id="modalPrev"
+          aria-label="Previous certificate"
+        >
+          ‹
+        </button>
+        <button
+          class="modal-nav modal-next"
+          id="modalNext"
+          aria-label="Next certificate"
+        >
+          ›
+        </button>
+        <div class="modal-content" id="modalContent" tabindex="0"></div>
+      </div>
+    </div>
+
+    <footer class="finch-footer rgb-footer" role="contentinfo">
+      <div class="finch-footer-content">
+        <div class="finch-footer-left">
+          <h2 class="finch-logo">From Heaven To Horizon</h2>
+          <p>Crafting Impactful Visuals with AI-Led UI/UX Design</p>
+        </div>
+        <div class="finch-footer-center">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/25/25231.png"
+                alt="GitHub Logo"
+              /><a href="https://github.com/ChaosForCurio">GitHub</a>
+            </li>
+            <li>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/3670/3670274.png"
+                alt="Instagram Logo"
+              /><a href="https://www.instagram.com/bornsukunaa/">Instagram</a>
+            </li>
+            <li>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png"
+                alt="X Logo"
+              /><a href="https://x.com/FromChaosss">X</a>
+            </li>
+            <li>
+              <img
+                src="https://cdn-icons-png.flaticon.com/128/1384/1384014.png"
+                alt="LinkedIn Logo"
+              /><a href="https://www.linkedin.com/in/anshu-nayak-510341384/"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="finch-footer-right">
+          <h3>Contact</h3>
+          <p>
+            Email:
+            <a href="mailto:comes@FromHeavenToHorizon"
+              >comes@FromHeavenToHorizon</a
+            >
+          </p>
+          <p>Call: <a href="tel:+917777997049">+91 01125532553</a></p>
+          <address>
+            269-A, Shrinath Puram, Square 36 Road, Kota, Rajasthan
+          </address>
+        </div>
+      </div>
+      <div class="finch-footer-bottom">
+        <p>&copy; 2025 From Heaven To Horizon</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+:root {
+  --color-primary: #000000;
+  --color-background-light: #ffffff;
+  --color-background-dark: #0d0d0d;
+  --color-accent: #ff0000;
+
+  --font-main: "Roboto", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+
+  --spacing-gap: 2rem;
+  --border-radius: 1rem;
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --transition-fast: 0.3s ease;
+}
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--color-background-light);
+  font-family: var(--font-main);
+  cursor: url("/Images & Videos/Old\ Roblox--cursor--SweezyCursors\ \(1\).png")
+      16 16,
+    auto;
+}
+
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+  overflow: hidden;
+}
+
+.video-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+.hero-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+}
+
+.strip-container {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  margin-top: -6rem;
+}
+
+.strip-inner {
+  display: inline-flex;
+  gap: 3rem;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.strip-inner p {
+  color: #fff;
+  font-weight: bold;
+}
+
+.vertical-scroll-container {
+  position: fixed;
+  right: 3rem;
+  top: 7%;
+  height: 90vh;
+  width: 200px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.vertical-scroll-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-gap);
+  will-change: transform;
+}
+
+.vertical-scroll-inner img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+
+.cinematic-fullscreen {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden;
+}
+
+.cinematic-fullscreen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header {
+  position: fixed;
+  top: 2rem;
+  left: 6%;
+  right: 17%;
+  height: 60px;
+  background: transparent;
+  backdrop-filter: blur(5px);
+  border-radius: var(--border-radius);
+  z-index: 50;
+  transition: all var(--transition-fast);
+}
+
+.max-w-2xl {
+  position: relative;
+  left: -600px;
+  top: 3px;
+  text-align: left;
+}
+
+.max-w-2xl p {
+  color: var(--color-accent);
+}
+
+.awwwards-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 24rem;
+  margin: 10rem 0;
+}
+
+.awwwards-inner {
+  display: flex;
+  gap: var(--spacing-gap);
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.awwward-card {
+  width: 16rem;
+  background: #fff;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.awwward-card:hover {
+  transform: scale(1.05);
+}
+
+.awwward-card img {
+  height: 9rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.awwward-card h3 {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .video-hero {
+    height: 70vh;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .cinematic-fullscreen {
+    height: 100vh;
+  }
+
+  .awwwards-container {
+    height: 18rem;
+  }
+
+  .awwward-card {
+    width: 12rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .video-hero {
+    height: 50vh;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .cinematic-fullscreen {
+    height: 90vh;
+  }
+
+  .vertical-scroll-container {
+    display: none;
+  }
+
+  .awwwards-container {
+    height: 16rem;
+  }
+
+  .awwward-card {
+    width: 10rem;
+  }
+}
+.awwward-card:hover,
+button:hover,
+a:hover,
+.hero-text h1:hover,
+.vertical-scroll-inner img:hover {
+  cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png") 16 16,
+    pointer;
+}
