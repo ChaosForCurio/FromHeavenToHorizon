@@ -22,6 +22,15 @@
       sizes="32x32"
       href="/Images & Videos/My Favicon.png"
     />
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "ba90f5d0-ce07-417e-82b8-72f3de66260e",
+    });
+  });
+</script>
   </head>
   <body
     class="bg-white font-sans text-gray-900 antialiased selection:bg-black selection:text-white"
@@ -280,3 +289,4 @@
     <script src="Connect.js" defer></script>
   </body>
 </html>
+
