@@ -44,6 +44,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "tithekbreq");
 </script>
+ 
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdgiewrAAAAAL_VT9qdcEmA6OGuRiJYpEdy8nNk"></script>
+
   </head>
 
   <body>
@@ -163,10 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               >
                 Explore More
               </button>
-              <button class="g-recaptcha" 
-        data-sitekey="reCAPTCHA_site_key" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+    
             </div>
 
             <div id="heroright">
@@ -186,15 +186,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </section>
     </main>
-     <script>
-   function onSubmit(token) {
-     document.getElementById("demo-form").submit();
-   }
- </script>
-     <script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6LdgiewrAAAAAL_VT9qdcEmA6OGuRiJYpEdy8nNk', {action: 'LOGIN'});
+    });
+  }
+</script>
     <script type='text/javascript' src='//pl27860152.effectivegatecpm.com/c4/ab/0a/c4ab0a1fc101f0bc6143f9aec6b6e8a3.js'></script>
   </body>
 </html>
+
 
 
 
