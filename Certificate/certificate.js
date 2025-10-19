@@ -1,3 +1,4 @@
+const certificates = document.querySelectorAll('.content');
 document.addEventListener("DOMContentLoaded", () => {
   try {
     if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
@@ -171,3 +172,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Error initializing cinematic portfolio scripts:", error);
   }
 });
+
