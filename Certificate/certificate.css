@@ -276,6 +276,38 @@ img {
   color: #dbd8ca;
 }
 
+.finch-footer.rgb-footer {
+  background: linear-gradient(
+    270deg,
+    #ff0066,
+    #6b2828,
+    #100707,
+    #060606,
+    #00eaff
+  );
+  background-size: 1000% 1000%;
+  animation: rgbShift 18s ease-in-out infinite;
+}
+
+@keyframes rgbShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 @media (max-width: 1024px) {
   .scene {
     padding: 1.8rem;
@@ -350,6 +382,7 @@ button:hover,
   cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"),
     pointer;
 }
+
 
 
 
