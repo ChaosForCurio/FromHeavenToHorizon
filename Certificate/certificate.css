@@ -139,6 +139,11 @@ img {
   font-family: "Marck Script", cursive;
 }
 
+.content h3 {
+  color: #1a73e8;
+  font-family: "Marck Script", cursive;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -350,4 +355,5 @@ button:hover,
   cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"),
     pointer;
 }
+
 
