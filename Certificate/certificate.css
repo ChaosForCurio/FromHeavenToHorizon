@@ -248,6 +248,19 @@ img {
   background-size: 800% 800%;
   animation: rgbShift 12s ease infinite;
 }
+.between-certificates {
+  width: 4px;
+  height: 80px;
+  margin: 20px auto;
+  background: linear-gradient(to bottom, #00ffff, #ff00ff);
+  border-radius: 10px;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; transform: scaleY(0.9); }
+  100% { opacity: 1; transform: scaleY(1.1); }
+}
 
 @keyframes rgbShift {
   0% {
@@ -355,5 +368,6 @@ button:hover,
   cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"),
     pointer;
 }
+
 
 
