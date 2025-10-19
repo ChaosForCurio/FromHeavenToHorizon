@@ -186,6 +186,10 @@ img {
   color: #ffffff;
 }
 
+.modal-content h4 {
+  color: #ffffff;
+}
+
 .close-btn {
   position: absolute;
   right: 2px;
@@ -346,3 +350,4 @@ button:hover,
   cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"),
     pointer;
 }
+
