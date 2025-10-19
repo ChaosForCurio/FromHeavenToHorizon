@@ -275,6 +275,24 @@ img {
 .finch-footer a:hover {
   color: #dbd8ca;
 }
+@keyframes rgbShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .finch-footer.rgb-footer {
   background: linear-gradient(
@@ -382,6 +400,7 @@ button:hover,
   cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"),
     pointer;
 }
+
 
 
 
