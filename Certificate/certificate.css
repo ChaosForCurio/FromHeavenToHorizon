@@ -256,24 +256,6 @@ img {
   border-radius: 10px;
   animation: pulse 2s infinite alternate;
 }
-
-@keyframes pulse {
-  0% { opacity: 0.6; transform: scaleY(0.9); }
-  100% { opacity: 1; transform: scaleY(1.1); }
-}
-
-@keyframes rgbShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .finch-footer-content {
   display: flex;
   flex-wrap: wrap;
@@ -368,6 +350,7 @@ button:hover,
   cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"),
     pointer;
 }
+
 
 
 
