@@ -73,7 +73,7 @@ input[type="button"] {
   transform-origin: center;
 }
 
-#back img.Panel {
+#back img.panel {
   width: 100%;
   height: max-content;
   z-index: 2;
@@ -377,7 +377,7 @@ input[type="button"] {
     width: 100%;
     max-width: 400px;
   }
-  #back img.Panel {
+  #back img.panel {
     height: 80vh;
     object-position: center top;
   }
@@ -407,7 +407,7 @@ input[type="button"] {
     width: 100%;
     max-width: 350px;
   }
-  #back img.Panel {
+  #back img.panel {
     height: 70vh;
     object-position: center top;
   }
@@ -452,7 +452,7 @@ input[type="button"] {
     border-width: 2px;
     padding: 0.5em;
   }
-  #back img.Panel {
+  #back img.panel {
     height: 100vh;
     object-position: center top;
   }

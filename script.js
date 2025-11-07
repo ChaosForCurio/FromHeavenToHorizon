@@ -1,5 +1,8 @@
 (() => {
   "use strict";
+  const { gsap, ScrollTrigger } = window;
+  const hasGSAP = typeof gsap !== "undefined";
+  const hasScrollTrigger = typeof ScrollTrigger !== "undefined";
   const NOT_FOUND_PATH = "/404.html";
   const RAF_FALLBACK_TIMEOUT = 1000;
 
@@ -24,12 +27,12 @@
     if (shouldRedirect) safeRedirectTo404();
   }
 
-  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") {
+  if (!hasGSAP || !hasScrollTrigger) {
     console.error("GSAP or ScrollTrigger not available. Aborting animations.");
   }
 
   const images =
-    gsap && document.querySelectorAll
+    hasGSAP && document.querySelectorAll
       ? Array.from(document.querySelectorAll("#back img"))
       : [];
   let currentScroll = 0;
@@ -40,6 +43,10 @@
   let rafTimeoutId = null;
 
   function startSmoothScroll() {
+    if (!hasGSAP) {
+      console.warn("GSAP unavailable for smoothScroll — skipping.");
+      return;
+    }
     if (!images || images.length === 0) {
       console.warn("No images found in #back for smoothScroll — skipping.");
       return;
@@ -257,6 +264,10 @@
   }
 
   function startMarquee() {
+    if (!hasGSAP) {
+      console.warn("GSAP unavailable for marquee — skipping.");
+      return;
+    }
     const marquee = document.querySelector(".marquee");
     if (!marquee) return;
 
@@ -297,6 +308,10 @@
 
   function startProductsScroller() {
     try {
+      if (!hasGSAP) {
+        console.warn("GSAP unavailable for products scroller — skipping.");
+        return;
+      }
       const container = document.getElementById("products");
       if (!container) {
         console.warn("Products container not found");
@@ -322,6 +337,10 @@
   }
 
   function animateSnake(selector, duration, yoyo = false) {
+    if (!hasGSAP) {
+      console.warn("GSAP unavailable for snake animation — skipping.");
+      return;
+    }
     try {
       const paths = document.querySelectorAll(selector + " path");
       if (!paths || paths.length === 0) {
@@ -349,12 +368,10 @@
 
   window.addEventListener("error", (e) => {
     console.error("Global error caught:", e ? e.message || e : e);
-    if (!isOn404()) safeRedirectTo404();
   });
 
   window.addEventListener("unhandledrejection", (e) => {
     console.error("Unhandled Promise rejection:", e ? e.reason || e : e);
-    if (!isOn404()) safeRedirectTo404();
   });
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -365,17 +382,17 @@
         console.error("Failed to instantiate PageTransition:", err);
       }
 
-      if (typeof gsap !== "undefined") {
+      if (hasGSAP) {
         startMarquee();
       }
 
-      if (typeof gsap !== "undefined") {
+      if (hasGSAP) {
         startProductsScroller();
       }
 
       animateSnake(".footer-snake", 4.5, true);
 
-      if (images && images.length > 0 && typeof gsap !== "undefined") {
+      if (hasGSAP && images && images.length > 0) {
         startSmoothScroll();
       }
 
