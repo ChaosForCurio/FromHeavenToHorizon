@@ -27,6 +27,21 @@ body {
   z-index: 10000;
 }
 
+/* Responsive adjustments for images within the form */
+#contactForm img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* Removes bottom space under images */
+}
+
+/* General responsive image rule for any img tags not specifically targeted */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hamburger-icon.open {
   transform: rotate(45deg);
 }
@@ -53,16 +68,14 @@ body {
 }
 
 .rgb-footer {
-  background: linear-gradient(
-    270deg,
-    #ffffff,
-    #000000,
-    #d00000,
-    #131313,
-    #98a0a0,
-    #e8e8e1,
-    #dd0000
-  );
+  background: linear-gradient(270deg,
+      #ffffff,
+      #000000,
+      #d00000,
+      #131313,
+      #98a0a0,
+      #e8e8e1,
+      #dd0000);
   background-size: 1400% 1400%;
   animation: rgbShift 15s linear infinite;
   font-family: marckScript, cursive;
@@ -72,9 +85,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -99,15 +114,19 @@ svg:hover * {
 svg:hover *:nth-child(1) {
   transform: translate(-40px, -40px) scale(0.4);
 }
+
 svg:hover *:nth-child(2) {
   transform: translate(50px, -30px) scale(0.5);
 }
+
 svg:hover *:nth-child(3) {
   transform: translate(-60px, 20px) scale(0.3);
 }
+
 svg:hover *:nth-child(4) {
   transform: translate(40px, 50px) scale(0.6);
 }
+
 svg:hover *:nth-child(5) {
   transform: translate(-20px, 60px) scale(0.5);
 }
@@ -116,9 +135,11 @@ svg:hover *:nth-child(5) {
   0% {
     filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.5));
   }
+
   50% {
     filter: drop-shadow(0 0 12px rgb(0, 0, 0));
   }
+
   100% {
     filter: drop-shadow(0 0 2px rgb(216, 216, 217));
   }
@@ -187,12 +208,10 @@ button:active::after,
 }
 
 .gradient-text {
-  background: linear-gradient(
-    90deg,
-    oklch(14.7% 0.004 49.25),
-    oklch(42.036% 0.16405 28.161),
-    oklch(53.772% 0.00584 48.217)
-  );
+  background: linear-gradient(90deg,
+      oklch(14.7% 0.004 49.25),
+      oklch(42.036% 0.16405 28.161),
+      oklch(53.772% 0.00584 48.217));
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -208,6 +227,7 @@ button:active::after,
   0% {
     background-position: 0% center;
   }
+
   100% {
     background-position: 100% center;
   }
@@ -303,21 +323,26 @@ form button {
     stroke-dashoffset: 600;
     stroke: white;
   }
+
   25% {
     stroke: #ccc;
   }
+
   50% {
     stroke-dashoffset: 0;
     stroke: black;
   }
+
   75% {
     stroke: #8b0707;
   }
+
   100% {
     stroke-dashoffset: 600;
     stroke: rgb(227, 227, 227);
   }
 }
+
 a,
 button,
 .nav-link,

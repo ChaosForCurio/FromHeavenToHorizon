@@ -19,8 +19,7 @@ body {
   overflow-x: hidden;
   background: var(--color-background-light);
   font-family: var(--font-main);
-  cursor: url("/Images & Videos/Old\ Roblox--cursor--SweezyCursors\ \(1\).png")
-      16 16,
+  cursor: url("/Images & Videos/Old\ Roblox--cursor--SweezyCursors\ \(1\).png") 16 16,
     auto;
 }
 
@@ -177,6 +176,10 @@ header {
   height: 9rem;
   object-fit: cover;
   border-radius: 0.5rem;
+  width: 100%;
+  /* Make width responsive */
+  height: auto;
+  /* Adjust height automatically */
 }
 
 .awwward-card h3 {
@@ -234,6 +237,7 @@ header {
     width: 10rem;
   }
 }
+
 .awwward-card:hover,
 button:hover,
 a:hover,

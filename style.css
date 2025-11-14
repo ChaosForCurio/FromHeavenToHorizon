@@ -66,7 +66,8 @@ input[type="button"] {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 130%;
+  height: 100%;
+  /* Changed from 130% to 100% for better responsiveness */
   object-fit: cover;
   opacity: 1;
   will-change: transform;
@@ -75,9 +76,18 @@ input[type="button"] {
 
 #back img.panel {
   width: 100%;
-  height: max-content;
+  height: auto;
+  /* Changed from max-content to auto for better responsiveness */
   z-index: 2;
   object-fit: cover;
+}
+
+/* General responsive image rule */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* Removes bottom space under images */
 }
 
 #workingarea {
@@ -273,9 +283,11 @@ input[type="button"] {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -285,9 +297,11 @@ input[type="button"] {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -297,6 +311,7 @@ input[type="button"] {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -312,6 +327,7 @@ input[type="button"] {
   0% {
     stroke-dashoffset: 1000;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
@@ -337,6 +353,7 @@ input[type="button"] {
   #heroleft h1 {
     font-size: clamp(4rem, 5vw, 6rem);
   }
+
   #heroright {
     width: 350px;
     height: 350px;
@@ -347,6 +364,7 @@ input[type="button"] {
   #heroleft h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
   }
+
   #heroright {
     width: 320px;
     max-width: 8%;
@@ -362,21 +380,26 @@ input[type="button"] {
     text-align: center;
     padding: 1em;
   }
+
   #heroleft {
     align-items: center;
     text-align: center;
   }
+
   #heroleft h1 {
     font-size: clamp(2rem, 5vw, 3rem);
   }
+
   #heroleft button {
     align-self: center;
   }
+
   #heroright {
     margin-top: 20px;
     width: 100%;
     max-width: 400px;
   }
+
   #back img.panel {
     height: 80vh;
     object-position: center top;
@@ -394,23 +417,29 @@ input[type="button"] {
     gap: 10px;
     padding: 10px 0;
   }
+
   #nav img {
     height: 45px;
   }
+
   #nav a {
     font-size: 0.8rem;
   }
+
   #heroleft h1 {
     font-size: 2rem;
   }
+
   #heroright {
     width: 100%;
     max-width: 350px;
   }
+
   #back img.panel {
     height: 70vh;
     object-position: center top;
   }
+
   #back img {
     object-position: center top;
   }
@@ -422,16 +451,20 @@ input[type="button"] {
     margin-left: -10%;
     height: 45px;
   }
+
   #nav a {
     font-size: 0.7rem;
   }
+
   #heroleft h1 {
     font-size: 1.5rem;
   }
+
   #heroright {
     max-width: 100%;
     padding: 0.9em;
   }
+
   #heroright p {
     font-size: 0.9rem;
   }
@@ -441,20 +474,23 @@ input[type="button"] {
   #nav a {
     font-size: 0.6rem;
   }
+
   #heroleft h1 {
     font-size: 1.3rem;
   }
+
   #heroleft button {
     font-size: 0.8rem;
     padding: 0.5em 1em;
   }
+
   #heroright {
     border-width: 2px;
     padding: 0.5em;
   }
+
   #back img.panel {
     height: 100vh;
     object-position: center top;
   }
 }
-

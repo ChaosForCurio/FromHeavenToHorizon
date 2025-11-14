@@ -9,15 +9,21 @@ body {
   gap: 20px;
   width: max-content;
 }
+
 .products-section {
   overflow: hidden;
   height: 250px;
   position: relative;
 }
+
 .product-item img {
   border-radius: 0.5rem;
-  width: 400px;
-  height: 250px;
+  width: 100%;
+  /* Make width responsive */
+  height: auto;
+  /* Adjust height automatically */
+  max-height: 250px;
+  /* Maintain a max height if needed */
   object-fit: cover;
 }
 
@@ -28,6 +34,7 @@ body {
   margin-top: 5rem;
   overflow: hidden;
 }
+
 .finch-footer-content {
   display: flex;
   flex-wrap: wrap;
@@ -36,45 +43,56 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .finch-footer-left {
   text-align: left;
 }
+
 .finch-footer-center {
   text-align: center;
 }
+
 .finch-footer-right {
   text-align: right;
 }
+
 .finch-footer-center ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .finch-footer-center ul li {
   display: flex;
   align-items: center;
   margin-bottom: 0.75rem;
 }
+
 .finch-footer-center ul li img {
   width: 28px;
   height: 28px;
   object-fit: contain;
   margin-right: 0.5rem;
 }
+
 .finch-footer-center ul li a {
   color: #ddd;
   text-decoration: none;
 }
+
 .finch-footer-center ul li a:hover {
   color: #fff;
 }
+
 .finch-footer a {
   color: #ddd;
   text-decoration: none;
 }
+
 .finch-footer a:hover {
   color: #fff;
 }
+
 .finch-footer-bottom {
   text-align: center;
   margin-top: 2rem;
@@ -87,13 +105,16 @@ body {
   background-size: 800% 800%;
   animation: rgbShift 12s ease infinite;
 }
+
 @keyframes rgbShift {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -111,6 +132,7 @@ body {
     padding: 1.8rem;
     gap: 1rem;
   }
+
   .content {
     padding: 1rem;
   }
@@ -121,13 +143,16 @@ body {
     padding: 1rem;
     gap: 1.75rem;
   }
+
   .pair {
     flex-direction: column;
     gap: 1.25rem;
   }
+
   .connector {
     display: none;
   }
+
   .nav-links {
     flex-direction: column;
     margin-right: -200px;
@@ -148,6 +173,7 @@ body {
   .right-panel a:hover {
     color: #908e8b;
   }
+
   .right-panel p {
     color: #aa2020;
   }
@@ -155,10 +181,12 @@ body {
   .left-panel {
     display: none !important;
   }
+
   .right-panel {
     width: 100% !important;
     display: block !important;
   }
+
   .flex.h-screen {
     flex-direction: column;
     height: auto;
@@ -168,6 +196,7 @@ body {
     flex-direction: column;
     text-align: center;
   }
+
   .finch-footer-left,
   .finch-footer-center,
   .finch-footer-right {
@@ -185,19 +214,24 @@ body {
   0% {
     stroke-dashoffset: 1000;
   }
+
   25% {
     stroke-dashoffset: 700;
   }
+
   50% {
     stroke-dashoffset: 500;
   }
+
   75% {
     stroke-dashoffset: 250;
   }
+
   100% {
     stroke-dashoffset: 0;
   }
 }
+
 @media (max-width: 768px) {
   .right-panel {
     width: 100% !important;
@@ -211,11 +245,13 @@ h3,
 .content {
   color: rgb(212, 10, 10) !important;
 }
+
 .right-panel,
 h3,
 .right-panel * {
   color: #ffffff !important;
 }
+
 a:hover,
 button:hover,
 .content:hover,
