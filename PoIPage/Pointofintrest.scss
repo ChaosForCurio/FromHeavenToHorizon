@@ -1,0 +1,267 @@
+$font-stack: "Inter", sans-serif;
+$color-text: #eee;
+$color-bg-footer: linear-gradient(270deg, #000000, #1e2024, #3e403e, #1d1a1a);
+$color-highlight: rgb(212, 10, 10);
+$color-white: #ffffff;
+
+body {
+    font-family: $font-stack;
+    cursor: url("/Images & Videos/Old\ Roblox--cursor--SweezyCursors\ \(1\).png"),
+        auto;
+}
+
+.scroll-products {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+.products-section {
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+}
+
+.product-item img {
+    border-radius: 0.5rem;
+    width: 100%;
+    /* Make width responsive */
+    height: auto;
+    /* Adjust height automatically */
+    max-height: 250px;
+    /* Maintain a max height if needed */
+    object-fit: cover;
+}
+
+.finch-footer {
+    position: relative;
+    color: $color-text;
+    padding: 3rem 2rem;
+    margin-top: 5rem;
+    overflow: hidden;
+
+    a {
+        color: #ddd;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-white;
+            cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"), pointer;
+        }
+    }
+}
+
+.finch-footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.finch-footer-left {
+    text-align: left;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.finch-footer-center {
+    text-align: center;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+
+            img {
+                width: 28px;
+                height: 28px;
+                object-fit: contain;
+                margin-right: 0.5rem;
+            }
+
+            a {
+                color: #ddd;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
+
+.finch-footer-right {
+    text-align: right;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.finch-footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.rgb-footer {
+    background: $color-bg-footer;
+    background-size: 800% 800%;
+    animation: rgbShift 12s ease infinite;
+}
+
+@keyframes rgbShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    animation: float linear infinite;
+}
+
+@media (max-width: 1024px) {
+    .scene {
+        padding: 1.8rem;
+        gap: 1rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .scene {
+        padding: 1rem;
+        gap: 1.75rem;
+    }
+
+    .pair {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .connector {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-right: -200px;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .right-panel {
+        background-color: #1a1a1a;
+        color: $color-white;
+        transition: background 0.3s ease;
+        width: 100% !important;
+        display: block !important;
+
+        a {
+            color: $color-white;
+
+            &:hover {
+                color: #908e8b;
+                cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"), pointer;
+            }
+        }
+
+        p {
+            color: #aa2020;
+        }
+
+        * {
+            color: $color-white !important;
+        }
+    }
+
+    .left-panel {
+        display: none !important;
+    }
+
+    .flex.h-screen {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.footer-snake path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: slither-footer 3.5s infinite ease-in-out alternate;
+}
+
+@keyframes slither-footer {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    25% {
+        stroke-dashoffset: 700;
+    }
+
+    50% {
+        stroke-dashoffset: 500;
+    }
+
+    75% {
+        stroke-dashoffset: 250;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+h1,
+h2,
+h3,
+.content {
+    color: $color-highlight !important;
+}
+
+h3 {
+    color: $color-white !important;
+}
+
+a:hover,
+button:hover,
+.content:hover,
+.product-item:hover {
+    cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"),
+        pointer;
+}

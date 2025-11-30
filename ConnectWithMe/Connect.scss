@@ -1,0 +1,360 @@
+$font-stack: "Inter", sans-serif;
+$font-script: "marckScript", cursive;
+$color-text: #222;
+$color-bg: #fff;
+$color-primary: #000;
+$color-gray-gradient-start: #837b7b;
+$color-gray-gradient-end: #e0e0e0;
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    background: $color-bg;
+    color: $color-text;
+    cursor: url("/Images & Videos/Old\ Roblox--cursor--SweezyCursors\ \(1\).png"),
+        auto;
+}
+
+.bg-gray-gradient {
+    background: linear-gradient(180deg, $color-gray-gradient-start 0%, $color-gray-gradient-end 100%);
+}
+
+.hamburger-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    z-index: 10000;
+
+    &.open {
+        transform: rotate(45deg);
+
+        span:first-child {
+            transform: translateY(11px) rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:last-child {
+            transform: translateY(-11px) rotate(-45deg);
+        }
+    }
+
+    span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: $color-primary;
+        border-radius: 9px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+}
+
+/* Responsive adjustments for images within the form */
+#contactForm img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Removes bottom space under images */
+}
+
+/* General responsive image rule for any img tags not specifically targeted */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.rgb-footer {
+    background: linear-gradient(270deg,
+            #ffffff,
+            #000000,
+            #d00000,
+            #131313,
+            #98a0a0,
+            #e8e8e1,
+            #dd0000);
+    background-size: 1400% 1400%;
+    animation: rgbShift 15s linear infinite;
+    font-family: $font-script;
+}
+
+@keyframes rgbShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+svg {
+    cursor: pointer;
+    overflow: visible;
+    transition: transform 0.3s ease;
+
+    * {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    &:hover {
+        animation: pulse-glow 1.5s infinite ease-in-out;
+
+        * {
+            opacity: 0;
+        }
+
+        *:nth-child(1) {
+            transform: translate(-40px, -40px) scale(0.4);
+        }
+
+        *:nth-child(2) {
+            transform: translate(50px, -30px) scale(0.5);
+        }
+
+        *:nth-child(3) {
+            transform: translate(-60px, 20px) scale(0.3);
+        }
+
+        *:nth-child(4) {
+            transform: translate(40px, 50px) scale(0.6);
+        }
+
+        *:nth-child(5) {
+            transform: translate(-20px, 60px) scale(0.5);
+        }
+    }
+}
+
+@keyframes pulse-glow {
+    0% {
+        filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.5));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 12px rgb(0, 0, 0));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 2px rgb(216, 216, 217));
+    }
+}
+
+button,
+.animated-btn {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0);
+        background: rgba(0, 0, 0, 0.2);
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    &:active::after {
+        transform: scale(2);
+        opacity: 1;
+        transition: 0s;
+    }
+}
+
+.animated-btn {
+    display: inline-block;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(90deg, #000, #111);
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(120deg, #322932, #6f7a7a, #010101, #b5adb5);
+        transition: transform 0.5s ease;
+        z-index: 0;
+    }
+
+    &:hover::before {
+        transform: translateX(100%);
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(90deg,
+            oklch(14.7% 0.004 49.25),
+            oklch(42.036% 0.16405 28.161),
+            oklch(53.772% 0.00584 48.217));
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-shift 4s ease-in-out infinite alternate;
+}
+
+.gradient-fast {
+    animation-duration: 7s;
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 100% center;
+    }
+}
+
+#hero {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-size: 3rem;
+        text-align: center;
+        font-family: $font-script;
+    }
+
+    p {
+        max-width: 28rem;
+        text-align: center;
+        margin-top: 1rem;
+        color: #555;
+        font-family: $font-script;
+    }
+
+    @media (max-width: 640px) {
+        h2 {
+            font-size: 2.25rem;
+        }
+
+        p {
+            max-width: 20rem;
+        }
+    }
+}
+
+form {
+    width: 100%;
+    max-width: 32rem;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    font-family: $font-script;
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        margin-top: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 0.75rem;
+        font-size: 1rem;
+        outline: none;
+
+        &:focus {
+            border-color: $color-primary;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        margin-top: 1rem;
+        font-weight: 700;
+        font-size: 1rem;
+        border-radius: 0.75rem;
+    }
+
+    @media (max-width: 640px) {
+        padding: 1.5rem;
+    }
+}
+
+.snake-path {
+    stroke: rgb(0, 0, 0);
+    fill: none;
+    stroke-width: 3;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: slither 4s linear infinite;
+}
+
+@keyframes slither {
+    0% {
+        stroke-dashoffset: 600;
+        stroke: white;
+    }
+
+    25% {
+        stroke: #ccc;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+        stroke: black;
+    }
+
+    75% {
+        stroke: #8b0707;
+    }
+
+    100% {
+        stroke-dashoffset: 600;
+        stroke: rgb(227, 227, 227);
+    }
+}
+
+a,
+button,
+.nav-link,
+.animated-btn,
+svg,
+input,
+textarea {
+    cursor: url("/Images & Videos/Old\ Roblox--pointer--SweezyCursors.png"),
+        pointer;
+}

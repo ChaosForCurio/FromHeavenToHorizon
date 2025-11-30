@@ -108,16 +108,14 @@
           </div>
         </nav>
 
-        <section id="hero">
+        <section id="hero"></section>
           <div id="heroleft">
             <div class="elem">
               <h1 ng-repeat="word in heroWords">{{ word }}</h1>
             </div>
 
-            <button id="explore-button"
-              onclick="window.open('https://www.cloudskillsboost.google/profile/badges','_blank')">
-              Explore More
-            </button>
+            <script type="module" src="./components/explore-button.js"></script>
+            <explore-button id="explore-button">Explore More</explore-button>
 
           </div>
 
