@@ -1,195 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script type='text/javascript' src='//plugfundsbadger.com/59/8f/f4/598ff41efd7f11371e727450828448dc.js'></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XTJZLKZ5X9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="en" ng-app="portfolioApp">
 
-  gtag('config', 'G-XTJZLKZ5X9');
-</script>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KDWGFZB5');</script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HOME | From Heaven To Horizon</title>
-    <meta property="og:title" content="HOME | From Heaven To Horizon" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/ChaosForCurio/FromHeavenToHorizon/main/Images%20&%20Videos/Logo.png" />
-    <meta property="og:url" content="https://chaosforcurio.github.io/FromHeavenToHorizon/" />
-    <meta property="og:description" content="Anshu Kumar Nayak's portfolio website showcasing projects, certificates, and contact information." />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/Images & Videos/My Favicon.png"
-    />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      defer
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollSmoother.min.js"
-      defer
-    ></script>
-    <script src="script.js" defer></script>
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+<head>
+  <script type='text/javascript' src='//plugfundsbadger.com/59/8f/f4/598ff41efd7f11371e727450828448dc.js'></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTJZLKZ5X9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XTJZLKZ5X9');
+  </script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KDWGFZB5');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME | From Heaven To Horizon</title>
+  <meta property="og:title" content="HOME | From Heaven To Horizon" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/ChaosForCurio/FromHeavenToHorizon/main/Images%20&%20Videos/Logo.png" />
+  <meta property="og:url" content="https://chaosforcurio.github.io/FromHeavenToHorizon/" />
+  <meta property="og:description"
+    content="Anshu Kumar Nayak's portfolio website showcasing projects, certificates, and contact information." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/Images & Videos/My Favicon.png" />
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollSmoother.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "tithekbreq");
-</script>
-<script type="text/javascript"> adroll_adv_id = "KFN2O6WZKZCBLJHJ2R3DG5"; adroll_pix_id = "CCPUS5GAXBBVTFT2A6M4YF"; adroll_version = "2.0";  (function(w, d, e, o, a) { w.__adroll_loaded = true; w.adroll = w.adroll || []; w.adroll.f = [ 'setProperties', 'identify', 'track', 'identify_email', 'get_cookie' ]; var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id + "/roundtrip.js"; for (a = 0; a < w.adroll.f.length; a++) { w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) { return function() { w.adroll.push([ n, arguments ]) } })(w.adroll.f[a]) }  e = d.createElement('script'); o = d.getElementsByTagName('script')[0]; e.async = 1; e.src = roundtripUrl; o.parentNode.insertBefore(e, o); })(window, document); adroll.track("pageView"); </script> 
-  </head>
-  <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDWGFZB5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <div id="pageTransition" class="page-transition" aria-hidden="true">
-      <div class="transition-content">
-        <div class="transition-spinner" aria-hidden="true"></div>
-        <div class="transition-text">Loading...</div>
-      </div>
+  </script>
+  <script
+    type="text/javascript"> adroll_adv_id = "KFN2O6WZKZCBLJHJ2R3DG5"; adroll_pix_id = "CCPUS5GAXBBVTFT2A6M4YF"; adroll_version = "2.0"; (function (w, d, e, o, a) { w.__adroll_loaded = true; w.adroll = w.adroll || []; w.adroll.f = ['setProperties', 'identify', 'track', 'identify_email', 'get_cookie']; var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id + "/roundtrip.js"; for (a = 0; a < w.adroll.f.length; a++) { w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function (n) { return function () { w.adroll.push([n, arguments]) } })(w.adroll.f[a]) } e = d.createElement('script'); o = d.getElementsByTagName('script')[0]; e.async = 1; e.src = roundtripUrl; o.parentNode.insertBefore(e, o); })(window, document); adroll.track("pageView"); </script>
+</head>
+
+<body ng-controller="MainController">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDWGFZB5" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div id="pageTransition" class="page-transition" aria-hidden="true">
+    <div class="transition-content">
+      <div class="transition-spinner" aria-hidden="true"></div>
+      <div class="transition-text">Loading...</div>
     </div>
+  </div>
+
   <main id="main">
-      <section id="back" aria-hidden="true">
-        <img src="https://github.com/ChaosForCurio/FromHeavenToHorizon/blob/main/Images%20&%20Videos/Panel%201.png?raw=true" alt="Panel 2" />
-        <img src="https://github.com/ChaosForCurio/FromHeavenToHorizon/blob/main/Images%20&%20Videos/Adobe%20Express%20-%20file%20(3).png?raw=true" alt="Panel 3" />
-        <img src="/Images & Videos/Panel 2.png" alt="Panel 4" class="panel" />
-      </section>
-      <section id="top">
-        <div id="workingarea">
-          <nav id="nav" aria-label="Main Navigation">
-            <div id="nleft">
-              <a href="/" aria-label="Home">
-                <img
-                  src="/Images & Videos/Logo.png"
-                  alt="From Heaven To Horizon Logo"
-                  draggable="false"
-                  width="250"
-                  height="auto"
-                />
-              </a>
+    <section id="back" aria-hidden="true">
+      <img
+        src="https://github.com/ChaosForCurio/FromHeavenToHorizon/blob/main/Images%20&%20Videos/Panel%201.png?raw=true"
+        alt="Panel 2" />
+      <img
+        src="https://github.com/ChaosForCurio/FromHeavenToHorizon/blob/main/Images%20&%20Videos/Adobe%20Express%20-%20file%20(3).png?raw=true"
+        alt="Panel 3" />
+      <img src="/Images & Videos/Panel 2.png" alt="Panel 4" class="panel" />
+    </section>
+    <section id="top">
+      <div id="workingarea">
+        <nav id="nav" aria-label="Main Navigation">
+          <div id="nleft">
+            <a href="/" aria-label="Home">
+              <img src="/Images & Videos/Logo.png" alt="From Heaven To Horizon Logo" draggable="false" width="250"
+                height="auto" />
+            </a>
 
-              <svg
-                class="footer-snake"
-                width="100%"
-                height="60"
-                viewBox="0 0 1000 60"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M0 30 C200 60, 800 0, 1000 30"
-                  stroke="purple"
-                  stroke-width="15"
-                  fill="none"
-                />
-              </svg>
-              <a href="/Certificate/certificate.html">Certificates</a>
+            <svg class="footer-snake" width="100%" height="60" viewBox="0 0 1000 60" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M0 30 C200 60, 800 0, 1000 30" stroke="purple" stroke-width="15" fill="none" />
+            </svg>
+            <a href="/Certificate/certificate.html">Certificates</a>
 
-              <svg
-                class="footer-snake"
-                width="100%"
-                height="60"
-                viewBox="0 0 1000 60"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M0 30 C200 60, 800 0, 1000 30"
-                  stroke="red"
-                  stroke-width="15"
-                  fill="none"
-                />
-              </svg>
-              <a href="/PoIPage/Pointofintrest.html">Point of Interest</a>
+            <svg class="footer-snake" width="100%" height="60" viewBox="0 0 1000 60" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M0 30 C200 60, 800 0, 1000 30" stroke="red" stroke-width="15" fill="none" />
+            </svg>
+            <a href="/PoIPage/Pointofintrest.html">Point of Interest</a>
 
-              <svg
-                class="footer-snake"
-                width="100%"
-                height="60"
-                viewBox="0 0 1000 60"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M0 30 C200 60, 800 0, 1000 30"
-                  stroke="black"
-                  stroke-width="15"
-                  fill="none"
-                />
-              </svg>
+            <svg class="footer-snake" width="100%" height="60" viewBox="0 0 1000 60" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M0 30 C200 60, 800 0, 1000 30" stroke="black" stroke-width="15" fill="none" />
+            </svg>
+          </div>
+
+          <div id="nright">
+            <a href="/Project/Project.html">Project</a>
+
+            <svg class="footer-snake" width="100%" height="60" viewBox="0 0 1000 60" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M0 30 C200 60, 800 0, 1000 30" stroke="grey" stroke-width="15" fill="none" />
+            </svg>
+            <a href="/ConnectWithMe/Connect.html">Connect With Me</a>
+          </div>
+        </nav>
+
+        <section id="hero">
+          <div id="heroleft">
+            <div class="elem">
+              <h1 ng-repeat="word in heroWords">{{ word }}</h1>
             </div>
 
-            <div id="nright">
-              <a href="/Project/Project.html">Project</a>
+            <button id="explore-button"
+              onclick="window.open('https://www.cloudskillsboost.google/profile/badges','_blank')">
+              Explore More
+            </button>
 
-              <svg
-                class="footer-snake"
-                width="100%"
-                height="60"
-                viewBox="0 0 1000 60"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path
-                  d="M0 30 C200 60, 800 0, 1000 30"
-                  stroke="grey"
-                  stroke-width="15"
-                  fill="none"
-                />
-              </svg>
-              <a href="/ConnectWithMe/Connect.html">Connect With Me</a>
+          </div>
+
+          <div id="heroright">
+            <p>Anshu Kumar Nayak</p>
+            <div id="imagediv" role="presentation"></div>
+
+            <div class="marquee" aria-label="Scrolling Quote">
+              <span class="marquee-text" ng-repeat="item in marqueeItems track by $index">{{ item }}</span>
             </div>
-          </nav>
-
-          <section id="hero">
-            <div id="heroleft">
-              <div class="elem">
-                <h1>Comes</h1>
-                <h1>From</h1>
-                <h1>Heaven</h1>
-              </div>
-
-              <button
-                id="explore-button"
-                onclick="window.open('https://www.cloudskillsboost.google/profile/badges','_blank')"
-              >
-                Explore More
-              </button>
-    
-            </div>
-
-            <div id="heroright">
-              <p>Anshu Kumar Nayak</p>
-              <div id="imagediv" role="presentation"></div>
-
-              <div class="marquee" aria-label="Scrolling Quote">
-                <span class="marquee-text"
-                  >People are terrified of me, and I want them to be.</span
-                >
-                <span class="marquee-text"
-                  >People are terrified of me, and I want them to be.</span
-                >
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
-    </main>
-    <script type='text/javascript' src='//pl27860152.effectivegatecpm.com/c4/ab/0a/c4ab0a1fc101f0bc6143f9aec6b6e8a3.js'></script>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script type='text/javascript'
+    src='//pl27860152.effectivegatecpm.com/c4/ab/0a/c4ab0a1fc101f0bc6143f9aec6b6e8a3.js'></script>
   <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/244171697.js"></script>
-  </body>
-</html>
+</body>
 
+</html>
