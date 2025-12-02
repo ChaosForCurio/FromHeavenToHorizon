@@ -25,20 +25,11 @@ body {
   cursor: url("Images & Videos/Old Roblox--cursor--SweezyCursors (1).png"), auto;
 }
 
-p:hover,
-h1:hover,
-#explore-button:hover,
-span:hover,
-button:hover,
-a:hover,
-img:hover,
-.clickable,
-button,
-a,
-[onclick],
-[role="button"],
-input[type="submit"],
-input[type="button"] {
+p:hover, h1:hover, #explore-button:hover, span:hover, button:hover, a:hover, img:hover, .clickable:hover, [onclick]:hover, [role=button]:hover, input[type=submit]:hover, input[type=button]:hover {
+  cursor: url("Images & Videos/Old Roblox--pointer--SweezyCursors.png"), pointer !important;
+}
+
+button, a, .clickable, [onclick], [role=button], input[type=submit], input[type=button] {
   cursor: url("Images & Videos/Old Roblox--pointer--SweezyCursors.png"), pointer !important;
 }
 
@@ -48,7 +39,6 @@ input[type="button"] {
   position: relative;
   transition: opacity 0.5s ease-in-out;
 }
-
 #main.fade-out {
   opacity: 0;
 }
@@ -61,33 +51,45 @@ input[type="button"] {
   z-index: -1;
   overflow: hidden;
 }
-
 #back img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  /* Changed from 130% to 100% for better responsiveness */
   object-fit: cover;
   opacity: 1;
   will-change: transform;
   transform-origin: center;
 }
-
 #back img.panel {
   width: 100%;
   height: auto;
-  /* Changed from max-content to auto for better responsiveness */
   z-index: 2;
   object-fit: cover;
 }
+@media (max-width: 1024px) {
+  #back img.panel {
+    height: 80vh;
+    object-position: center top;
+  }
+}
+@media (max-width: 768px) {
+  #back img.panel {
+    height: 70vh;
+    object-position: center top;
+  }
+}
+@media (max-width: 400px) {
+  #back img.panel {
+    height: 100vh;
+    object-position: center top;
+  }
+}
 
-/* General responsive image rule */
 img {
   max-width: 100%;
   height: auto;
   display: block;
-  /* Removes bottom space under images */
 }
 
 #workingarea {
@@ -110,9 +112,40 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-
 #nav img {
-  height: 60px;
+  width: 110px;
+  height: auto;
+}
+@media (max-width: 800px) {
+  #nav img {
+    margin-top: -6%;
+    margin-left: -10%;
+    height: 45px;
+  }
+}
+#nav a {
+  color: var(--color-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+@media (max-width: 800px) {
+  #nav a {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 400px) {
+  #nav a {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 768px) {
+  #nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
 }
 
 #nleft,
@@ -122,14 +155,6 @@ img {
   gap: 20px;
 }
 
-#nav a {
-  color: var(--color-primary);
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
 #hero {
   display: flex;
   justify-content: space-between;
@@ -137,6 +162,14 @@ img {
   width: 100%;
   height: calc(100% - 80px);
   gap: 2%;
+}
+@media (max-width: 1024px) {
+  #hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+  }
 }
 
 #heroleft {
@@ -148,14 +181,18 @@ img {
   padding: 1em;
   color: #e6e6e6;
 }
-
+@media (max-width: 1024px) {
+  #heroleft {
+    align-items: center;
+    text-align: center;
+  }
+}
 #heroleft .elem {
   display: flex;
   flex-direction: column;
-  height: calc(6vw * 1.1 * 3);
+  height: 19.8vw;
   overflow: hidden;
 }
-
 #heroleft h1 {
   font-size: 6vw;
   line-height: 1.1;
@@ -170,7 +207,31 @@ img {
   -webkit-text-fill-color: transparent;
   animation: gradientMove 10s ease infinite;
 }
-
+@media (min-width: 1440px) {
+  #heroleft h1 {
+    font-size: clamp(4rem, 5vw, 6rem);
+  }
+}
+@media (max-width: 1280px) {
+  #heroleft h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+}
+@media (max-width: 1024px) {
+  #heroleft h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+}
+@media (max-width: 800px) {
+  #heroleft h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  #heroleft h1 {
+    font-size: 1.3rem;
+  }
+}
 #heroleft button {
   align-self: flex-start;
   margin-top: 2vw;
@@ -180,6 +241,17 @@ img {
   background: var(--color-light);
   color: var(--color-dark);
   border: none;
+}
+@media (max-width: 1024px) {
+  #heroleft button {
+    align-self: center;
+  }
+}
+@media (max-width: 400px) {
+  #heroleft button {
+    font-size: 0.8rem;
+    padding: 0.5em 1em;
+  }
 }
 
 #heroright {
@@ -193,14 +265,12 @@ img {
   padding: 1em;
   color: var(--color-light);
   position: relative;
-
   background-image: url("https://github.com/ChaosForCurio/FromHeavenToHorizon/blob/main/Images%20&%20Videos/my%20parka%201.jpeg?raw=true");
   background-size: cover;
   background-position: center;
   border: 4px solid #000000;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
-
 #heroright::before {
   content: "";
   position: absolute;
@@ -208,7 +278,6 @@ img {
   background: rgba(0, 0, 0, 0.3);
   z-index: -1;
 }
-
 #heroright p {
   font-size: 1.5vw;
   font-weight: 300;
@@ -217,7 +286,11 @@ img {
   color: #d8d5d5;
   user-select: none;
 }
-
+@media (max-width: 800px) {
+  #heroright p {
+    font-size: 0.9rem;
+  }
+}
 #heroright #imagediv {
   width: 100%;
   height: 200px;
@@ -225,6 +298,45 @@ img {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+@media (min-width: 1440px) {
+  #heroright {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 1280px) {
+  #heroright {
+    width: 320px;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 1024px) {
+  #heroright {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+}
+@media (max-width: 800px) {
+  #heroright {
+    max-width: 100%;
+    padding: 0.9em;
+  }
+}
+@media (max-width: 768px) {
+  #heroright {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  #heroright {
+    border-width: 2px;
+    padding: 0.5em;
+  }
 }
 
 .page-transition {
@@ -242,11 +354,14 @@ img {
   z-index: 9999;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
-
 .page-transition.active {
   opacity: 1;
   visibility: visible;
   animation: gradientShift 2.5s ease-in-out infinite;
+}
+.page-transition.active .transition-content {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .transition-content {
@@ -255,11 +370,6 @@ img {
   transform: scale(0.8);
   opacity: 0;
   transition: all 0.6s ease;
-}
-
-.page-transition.active .transition-content {
-  transform: scale(1);
-  opacity: 1;
 }
 
 .transition-spinner {
@@ -283,40 +393,32 @@ img {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
 }
-
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
-
   100% {
     transform: rotate(360deg);
   }
 }
-
 .footer-snake path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
@@ -327,19 +429,16 @@ img {
   0% {
     stroke-dashoffset: 1000;
   }
-
   100% {
     stroke-dashoffset: 0;
   }
 }
-
 .marquee {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
   position: relative;
 }
-
 .marquee-text {
   display: inline-block;
   padding-right: 3rem;
@@ -349,148 +448,4 @@ img {
   will-change: transform;
 }
 
-@media (min-width: 1440px) {
-  #heroleft h1 {
-    font-size: clamp(4rem, 5vw, 6rem);
-  }
-
-  #heroright {
-    width: 350px;
-    height: 350px;
-  }
-}
-
-@media (max-width: 1280px) {
-  #heroleft h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-  }
-
-  #heroright {
-    width: 320px;
-    max-width: 8%;
-    height: auto;
-    margin-bottom: 90px;
-  }
-}
-
-@media (max-width: 1024px) {
-  #hero {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1em;
-  }
-
-  #heroleft {
-    align-items: center;
-    text-align: center;
-  }
-
-  #heroleft h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-  }
-
-  #heroleft button {
-    align-self: center;
-  }
-
-  #heroright {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 400px;
-  }
-
-  #back img.panel {
-    height: 80vh;
-    object-position: center top;
-  }
-}
-
-#nav img {
-  width: 110px;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  #nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px 0;
-  }
-
-  #nav img {
-    height: 45px;
-  }
-
-  #nav a {
-    font-size: 0.8rem;
-  }
-
-  #heroleft h1 {
-    font-size: 2rem;
-  }
-
-  #heroright {
-    width: 100%;
-    max-width: 350px;
-  }
-
-  #back img.panel {
-    height: 70vh;
-    object-position: center top;
-  }
-
-  #back img {
-    object-position: center top;
-  }
-}
-
-@media (max-width: 800px) {
-  #nav img {
-    margin-top: -6%;
-    margin-left: -10%;
-    height: 45px;
-  }
-
-  #nav a {
-    font-size: 0.7rem;
-  }
-
-  #heroleft h1 {
-    font-size: 1.5rem;
-  }
-
-  #heroright {
-    max-width: 100%;
-    padding: 0.9em;
-  }
-
-  #heroright p {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 400px) {
-  #nav a {
-    font-size: 0.6rem;
-  }
-
-  #heroleft h1 {
-    font-size: 1.3rem;
-  }
-
-  #heroleft button {
-    font-size: 0.8rem;
-    padding: 0.5em 1em;
-  }
-
-  #heroright {
-    border-width: 2px;
-    padding: 0.5em;
-  }
-
-  #back img.panel {
-    height: 100vh;
-    object-position: center top;
-  }
-}
+/*# sourceMappingURL=style.css.map */
